@@ -9,4 +9,8 @@ app.get("/date", (request, response) => {
   response.send(`Today's date is ${date}`);
 });
 
+app.get("/page", (request, response) => {
+  response.sendFile("./page.html", { root: __dirname });
+});
+
 app.listen(3000);
